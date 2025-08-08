@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM elements
-  const addButton = document.getElementById('add-task'); // Select Add Task button with id="add-task"
-  const taskInput = document.getElementById('task-input'); // Select input field for tasks
-  const taskList = document.getElementById('task-list'); // Select unordered list for task display
+  const addButton = document.getElementById('add-task');
+  const taskInput = document.getElementById('task-input');
+  const taskList = document.getElementById('task-list');
 
   // Function to add a new task
   function addTask() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     li.textContent = taskText;
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.classList.add('remove-btn'); // Add class using classList.add
+    removeButton.className = 'remove-btn';
 
     // Add click event to remove button
     removeButton.onclick = () => {
@@ -31,14 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Add event listeners
-  addButton.addEventListener('click', addTask); // Call addTask on button click
+  addButton.addEventListener('click', addTask); // Add task on button click
   taskInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-      addTask(); // Call addTask on Enter key press
+      addTask(); // Add task on Enter key press
     }
   });
-
-  // Note: The instruction to invoke addTask on DOMContentLoaded is omitted here as it would trigger an alert
-  // due to an empty taskInput on page load. Uncomment the line below if required for specific behavior.
-  // document.addEventListener('DOMContentLoaded', addTask);
 });
