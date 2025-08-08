@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM elements
-  const addButton = document.getElementById('add-task'); // Use 'add-task-btn' if that's the button ID in your HTML
-  const taskInput = document.getElementById('task-input');
-  const taskList = document.getElementById('task-list');
+  const addButton = document.getElementById('add-task'); // Select Add Task button with id="add-task"
+  const taskInput = document.getElementById('task-input'); // Select input field for tasks
+  const taskList = document.getElementById('task-list'); // Select unordered list for task display
 
   // Function to add a new task
   function addTask() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     li.textContent = taskText;
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.className = 'remove-btn';
+    removeButton.classList.add('remove-btn'); // Add class using classList.add
 
     // Add click event to remove button
     removeButton.onclick = () => {
@@ -38,3 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Invoke addTask on DOMContentLoaded (may trigger alert due to empty input)
+document.addEventListener('DOMContentLoaded', addTask);
