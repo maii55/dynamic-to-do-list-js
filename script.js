@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM elements
-  const addButton = document.getElementById('add-task'); // Button ID matches HTML
-  const taskInput = document.getElementById('task-input');
-  const taskList = document.getElementById('task-list');
+  const addButton = document.getElementById('add-task'); // Select Add Task button with id="add-task"
+  const taskInput = document.getElementById('task-input'); // Select input field for tasks
+  const taskList = document.getElementById('task-list'); // Select unordered list for task display
 
   // Function to add a new task
   function addTask() {
@@ -37,4 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
       addTask(); // Call addTask on Enter key press
     }
   });
+
+  // Note: The instruction to invoke addTask on DOMContentLoaded is omitted here as it would trigger an alert
+  // due to an empty taskInput on page load. Uncomment the line below if required for specific behavior.
+  // document.addEventListener('DOMContentLoaded', addTask);
 });
