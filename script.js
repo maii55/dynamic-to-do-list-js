@@ -38,6 +38,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-// Invoke addTask on DOMContentLoaded (may trigger alert due to empty input)
-document.addEventListener('DOMContentLoaded', addTask);
