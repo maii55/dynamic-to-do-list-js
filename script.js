@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM elements
-  const addButton = document.getElementById('add-task');
-  const taskInput = document.getElementById('task-input');
-  const taskList = document.getElementById('task-list');
+  const addButton = document.getElementById('add-task'); // Select Add Task button
+  const taskInput = document.getElementById('task-input'); // Select task input field
+  const taskList = document.getElementById('task-list'); // Select task list
 
   // Function to add a new task
   function addTask() {
