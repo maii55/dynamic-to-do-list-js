@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM elements
-  const addButton = document.getElementById('add-task'); // Use 'add-task-btn' if that's the button ID in your HTML
+  const addButton = document.getElementById('add-task'); // Update to 'add-task-btn' if needed
   const taskInput = document.getElementById('task-input');
   const taskList = document.getElementById('task-list');
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     li.textContent = taskText;
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.className = 'remove-btn';
+    removeButton.classList.add('remove-btn'); // Use classList.add instead of className
 
     // Add click event to remove button
     removeButton.onclick = () => {
